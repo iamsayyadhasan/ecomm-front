@@ -76,7 +76,6 @@ function CartPage() {
   }
 };
 
-
   const handleCheckout = async () => {
     console.log("token");
     try {
