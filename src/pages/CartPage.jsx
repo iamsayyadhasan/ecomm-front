@@ -37,20 +37,24 @@ function CartPage() {
   }, [user, setCart]);
 
   const handleQuantityChange = async (id, delta) => {
+  try {
     const item = cart.find((item) => item.product._id === id);
     if (!item) return;
 
     const newQty = item.quantity + delta;
 
     if (newQty <= 0) {
-      await axios.delete(`/api/cart/remove/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      await axios.delete(
+        `https://ecomm-back-sbvq.onrender.com/api/cart/remove/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
     } else {
       await axios.put(
-        `/api/cart/update`,
+        `https://ecomm-back-sbvq.onrender.com/api/cart/update`,
         { productId: id, quantity: newQty },
         {
           headers: {
@@ -60,11 +64,17 @@ function CartPage() {
       );
     }
 
-    const res = await axios.get(`/api/cart/user/${user._id}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    const res = await axios.get(
+      `https://ecomm-back-sbvq.onrender.com/api/cart/user/${user._id}`,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
     setCart(res.data.cart);
-  };
+  } catch (error) {
+    console.error("Error updating cart quantity:", error);
+  }
+};
 
   const handleCheckout = async () => {
     console.log("token");
