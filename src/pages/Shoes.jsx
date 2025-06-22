@@ -12,7 +12,7 @@ function Shoes() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products/category/Shoes")
+      .get("https://ecomm-back-sbvq.onrender.com/api/products/category/Shoes")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error("Shoes fetch error:", err));
   }, []);

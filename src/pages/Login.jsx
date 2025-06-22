@@ -14,10 +14,11 @@ function Login() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://ecomm-back-sbvq.onrender.com/api/auth/login",
         { email, password },
-        { withCredentials: true } 
+       
       );
+      console.log("data",email,password)
 
       login(res.data.user, res.data.token);
       navigate("/");

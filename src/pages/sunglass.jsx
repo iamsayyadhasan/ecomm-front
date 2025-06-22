@@ -12,7 +12,7 @@ function Sunglass() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products/category/Sunglasses")
+      .get("https://ecomm-back-sbvq.onrender.com/api/products/category/Sunglasses")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error("Sunglasses fetch error:", err));
   }, []);

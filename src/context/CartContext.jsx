@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
 
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/cart/user/${user._id}`,
+          `https://ecomm-back-sbvq.onrender.com/api/cart/user/${user._id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -41,7 +41,7 @@ export const CartProvider = ({ children }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/cart/add",
+        "https://ecomm-back-sbvq.onrender.com/api/cart/add",
         { product }, 
         {
           headers: {
@@ -62,7 +62,7 @@ export const CartProvider = ({ children }) => {
 
     try {
       const res = await axios.delete(
-        `http://localhost:5000/api/cart/remove/${productId}`,
+        `https://ecomm-back-sbvq.onrender.com/api/cart/remove/${productId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -82,7 +82,7 @@ export const CartProvider = ({ children }) => {
 
     try {
       const res = await axios.put(
-        "http://localhost:5000/api/cart/update",
+        "https://ecomm-back-sbvq.onrender.com/api/cart/update",
         {
           productId,
           quantity: newQty,

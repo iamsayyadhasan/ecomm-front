@@ -10,7 +10,7 @@ function MyOrders() {
     console.log(token)
      const fetchOrders = async () => {
       try {
-        const res = await axios.get("/api/order/my-orders", {
+        const res = await axios.get("https://ecomm-back-sbvq.onrender.com/api/order/my-orders", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
