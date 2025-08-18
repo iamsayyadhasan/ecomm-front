@@ -1,12 +1,46 @@
-# React + Vite
+# 🛒 MERN E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack **E-Commerce web application** built using the **MERN stack** (MongoDB, Express, React, Node.js) with a modern, responsive UI and complete backend functionality.
 
-Currently, two official plugins are available:
+ Demo
+Check out the live demo here: https://clothys.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend (React + Tailwind CSS)**
+  - Fully responsive UI
+  - Product listing and details page
+  - Shopping cart functionality
+  - User authentication (Login/Register)
+  - Checkout page
+
+- **Backend (Node.js + Express)**
+  - RESTful APIs for Products, Users, and Authentication
+  - MongoDB database integration
+  - JWT-based authentication
+  - Secure password hashing
+
+- **Database (MongoDB)**
+  - Product schema with seeding
+  - User schema with authentication support
+  - Order schema (extendable for payments)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js, Tailwind CSS, Axios
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB (Mongoose ODM)
+- **Authentication:** JWT & bcrypt.js
+
+---
+
+## 📦 Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/ecommerce-mern.git
+   cd ecommerce-mern
